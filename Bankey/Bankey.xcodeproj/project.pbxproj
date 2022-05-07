@@ -56,8 +56,8 @@
 		BE0E42F3282302F2000F0666 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
-				BE0E431828230A9A000F0666 /* Login */,
-				BE751976282698E600425A37 /* Onboarding */,
+				BE157E972827054200D5173B /* Log */,
+				BE157E962827050700D5173B /* Onboard */,
 				BE0E430E282307C1000F0666 /* Files */,
 			);
 			path = Bankey;
@@ -74,15 +74,6 @@
 			name = Files;
 			sourceTree = "<group>";
 		};
-		BE0E431828230A9A000F0666 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				BE0E42F8282302F2000F0666 /* LoginViewController.swift */,
-				BE0E431C28230BC3000F0666 /* LoginView.swift */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
 		BE0E431928230B51000F0666 /* App Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,12 +82,21 @@
 			name = "App Support";
 			sourceTree = "<group>";
 		};
-		BE751976282698E600425A37 /* Onboarding */ = {
+		BE157E962827050700D5173B /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
 				BE7519772826990900425A37 /* OnboardingContainerVC.swift */,
 			);
-			name = Onboarding;
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		BE157E972827054200D5173B /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				BE0E42F8282302F2000F0666 /* LoginViewController.swift */,
+				BE0E431C28230BC3000F0666 /* LoginView.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
