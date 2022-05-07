@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
   let loginView = LoginView()
   let signInButton = UIButton()
   let errorMessageLabel = UILabel()
+  let primaryTitleLabel = UILabel()
+  let secondaryTitleLabel = UILabel()
   
   var username: String? {
     return loginView.usernameTextField.text
@@ -49,6 +51,17 @@ extension LoginViewController {
     errorMessageLabel.textColor = .systemRed
     errorMessageLabel.numberOfLines = 0
     errorMessageLabel.isHidden = true
+    
+    primaryTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+    primaryTitleLabel.textAlignment = .center
+    primaryTitleLabel.text = "Bankey"
+    primaryTitleLabel.font = UIFont.boldSystemFont(ofSize: 32)
+    
+    secondaryTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+    secondaryTitleLabel.textAlignment = .center
+    secondaryTitleLabel.text = "Your premium source for all the things in banking!"
+    secondaryTitleLabel.font = UIFont.systemFont(ofSize: 22, weight: .regular)
+    secondaryTitleLabel.numberOfLines = 0
   }
   
   
@@ -56,6 +69,8 @@ extension LoginViewController {
     view.addSubview(loginView)
     view.addSubview(signInButton)
     view.addSubview(errorMessageLabel)
+    view.addSubview(secondaryTitleLabel)
+    view.addSubview(primaryTitleLabel)
     
     NSLayoutConstraint.activate([
       loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -70,6 +85,13 @@ extension LoginViewController {
       errorMessageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
       errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor),
       
+      loginView.topAnchor.constraint(equalToSystemSpacingBelow: secondaryTitleLabel.bottomAnchor, multiplier: 3),
+      secondaryTitleLabel.leadingAnchor.constraint(equalTo: errorMessageLabel.leadingAnchor),
+      secondaryTitleLabel.trailingAnchor.constraint(equalTo: errorMessageLabel.trailingAnchor),
+      
+      secondaryTitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: primaryTitleLabel.bottomAnchor, multiplier: 3),
+      primaryTitleLabel.leadingAnchor.constraint(equalTo: secondaryTitleLabel.leadingAnchor),
+      primaryTitleLabel.trailingAnchor.constraint(equalTo: secondaryTitleLabel.trailingAnchor),
     ])
   }
 }
