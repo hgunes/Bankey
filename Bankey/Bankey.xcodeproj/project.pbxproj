@@ -12,6 +12,7 @@
 		BE0E42FE282302F5000F0666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0E42FD282302F5000F0666 /* Assets.xcassets */; };
 		BE0E4301282302F5000F0666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0E42FF282302F5000F0666 /* LaunchScreen.storyboard */; };
 		BE0E431D28230BC3000F0666 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0E431C28230BC3000F0666 /* LoginView.swift */; };
+		BE157E9928270AC800D5173B /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE157E9828270AC800D5173B /* OnboardingVC.swift */; };
 		BE7519782826990900425A37 /* OnboardingContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7519772826990900425A37 /* OnboardingContainerVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		BE0E4300282302F5000F0666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE0E4302282302F5000F0666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE0E431C28230BC3000F0666 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BE157E9828270AC800D5173B /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		BE7519772826990900425A37 /* OnboardingContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				BE7519772826990900425A37 /* OnboardingContainerVC.swift */,
+				BE157E9828270AC800D5173B /* OnboardingVC.swift */,
 			);
 			path = Onboard;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				BE0E431D28230BC3000F0666 /* LoginView.swift in Sources */,
 				BE7519782826990900425A37 /* OnboardingContainerVC.swift in Sources */,
+				BE157E9928270AC800D5173B /* OnboardingVC.swift in Sources */,
 				BE0E42F9282302F2000F0666 /* LoginViewController.swift in Sources */,
 				BE0E42F5282302F2000F0666 /* AppDelegate.swift in Sources */,
 			);
