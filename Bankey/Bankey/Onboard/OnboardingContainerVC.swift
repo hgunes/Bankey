@@ -11,19 +11,16 @@ class OnboardingContainerVC: UIViewController {
   
   let pageViewController: UIPageViewController
   var pages = [UIViewController]()
-  var currentVC: UIViewController {
-    didSet {
-      
-    }
-  }
+  var currentVC: UIViewController
+  let closeButton = UIButton(type: .system)
   
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     
-    let page1 = OnboardingVC(heroImage: UIImage(named: "delorean")!, title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
-    let page2 = OnboardingVC(heroImage: UIImage(named: "world")!, title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
-    let page3 = OnboardingVC(heroImage: UIImage(named: "thumbs")!, title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
+    let page1 = OnboardingVC(heroImage: "delorean", title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
+    let page2 = OnboardingVC(heroImage: "world", title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
+    let page3 = OnboardingVC(heroImage: "thumbs", title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
     
     pages.append(page1)
     pages.append(page2)
@@ -43,6 +40,12 @@ class OnboardingContainerVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setup()
+    style()
+    layout()
+  }
+  
+  private func setup() {
     view.backgroundColor = .systemPurple
     
     addChild(pageViewController)
@@ -60,8 +63,29 @@ class OnboardingContainerVC: UIViewController {
     ])
     
     pageViewController.setViewControllers([pages.first!], direction: .forward, animated: false)
-    
+    currentVC = pages.first!
   }
+  
+  
+  private func style() {
+    closeButton.translatesAutoresizingMaskIntoConstraints = false
+    closeButton.setTitle("Close", for: [])
+    closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .primaryActionTriggered)
+    view.addSubview(closeButton)
+  }
+  
+  
+  private func layout() {
+    NSLayoutConstraint.activate([
+      closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+      closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
+    ])
+  }
+  
+  @objc func closeButtonTapped() {
+    print("🔵 close button tapped")
+  }
+  
   
 }
 
@@ -99,30 +123,5 @@ extension OnboardingContainerVC: UIPageViewControllerDataSource {
   
   func presentationIndex(for pageViewController: UIPageViewController) -> Int {
     return pages.firstIndex(of: self.currentVC) ?? 0
-  }
-}
-
-
-class VC1: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .purple
-  }
-}
-
-class VC2: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .green
-  }
-}
-
-class VC3: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .red
   }
 }

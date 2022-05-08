@@ -24,9 +24,9 @@ class OnboardingVC: UIViewController {
   }
   
   
-  init(heroImage: UIImage, title: String) {
+  init(heroImage: String, title: String) {
     super.init(nibName: nil, bundle: nil)
-    self.imageView.image = heroImage
+    self.imageView.image = UIImage(named: heroImage)
     self.label.text = title
   }
   
