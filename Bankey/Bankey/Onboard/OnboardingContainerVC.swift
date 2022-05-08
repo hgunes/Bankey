@@ -21,9 +21,9 @@ class OnboardingContainerVC: UIViewController {
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     
-    let page1 = VC1()
-    let page2 = VC2()
-    let page3 = VC3()
+    let page1 = OnboardingVC(heroImage: UIImage(named: "delorean")!, title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
+    let page2 = OnboardingVC(heroImage: UIImage(named: "world")!, title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
+    let page3 = OnboardingVC(heroImage: UIImage(named: "thumbs")!, title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989.")
     
     pages.append(page1)
     pages.append(page2)

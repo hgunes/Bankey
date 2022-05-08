@@ -22,6 +22,17 @@ class OnboardingVC: UIViewController {
     style()
     layout()
   }
+  
+  
+  init(heroImage: UIImage, title: String) {
+    super.init(nibName: nil, bundle: nil)
+    self.imageView.image = heroImage
+    self.label.text = title
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 }
 
 
@@ -33,16 +44,14 @@ extension OnboardingVC {
     
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.contentMode = .scaleAspectFit
-    imageView.image = UIImage(named: "delorean")
     
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont.preferredFont(forTextStyle: .title2)
     label.adjustsFontForContentSizeCategory = true
     label.textAlignment = .center
     label.numberOfLines = 0
-    label.text = "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lika you are back in 1989."
   }
-  
+
   
   func layout() {
     stackView.addArrangedSubview(imageView)

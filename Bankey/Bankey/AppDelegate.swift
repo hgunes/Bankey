@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
 //    window?.rootViewController = LoginViewController()
 //    window?.rootViewController = OnboardingContainerVC()
-    window?.rootViewController = OnboardingVC()
+    window?.rootViewController = OnboardingContainerVC()
     
     return true
   }
