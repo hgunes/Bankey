@@ -7,12 +7,19 @@
 
 import UIKit
 
+protocol OnboardingContainerVCDelegate: AnyObject {
+  func didFinishOnboarding()
+}
+
 class OnboardingContainerVC: UIViewController {
   
   let pageViewController: UIPageViewController
   var pages = [UIViewController]()
   var currentVC: UIViewController
   let closeButton = UIButton(type: .system)
+  let doneButton = UIButton(type: .system)
+  
+  weak var delegate: OnboardingContainerVCDelegate?
   
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -72,18 +79,22 @@ class OnboardingContainerVC: UIViewController {
     closeButton.setTitle("Close", for: [])
     closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .primaryActionTriggered)
     view.addSubview(closeButton)
+    
+    doneButton.translatesAutoresizingMaskIntoConstraints = false
+    doneButton.setTitle("Done", for: [])
+    doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .primaryActionTriggered)
+    view.addSubview(doneButton)
   }
   
   
   private func layout() {
     NSLayoutConstraint.activate([
       closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-      closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
+      closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
+      
+      view.trailingAnchor.constraint(equalToSystemSpacingAfter: doneButton.trailingAnchor, multiplier: 2),
+      view.safeAreaLayoutGuide.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButton.bottomAnchor, multiplier: 3)
     ])
-  }
-  
-  @objc func closeButtonTapped() {
-    print("🔵 close button tapped")
   }
   
   
@@ -123,5 +134,15 @@ extension OnboardingContainerVC: UIPageViewControllerDataSource {
   
   func presentationIndex(for pageViewController: UIPageViewController) -> Int {
     return pages.firstIndex(of: self.currentVC) ?? 0
+  }
+  
+  
+  @objc func closeButtonTapped() {
+    delegate?.didFinishOnboarding()
+  }
+  
+  
+  @objc func doneButtonTapped() {
+    delegate?.didFinishOnboarding()
   }
 }
