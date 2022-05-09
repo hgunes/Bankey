@@ -23,15 +23,15 @@ class LoginViewController: UIViewController {
     return loginView.passwordTextField.text
   }
   
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     style()
     layout()
   }
-
-
+  
+  
 }
 
 extension LoginViewController {
@@ -40,12 +40,11 @@ extension LoginViewController {
     view.backgroundColor = .systemBackground
     
     signInButton.translatesAutoresizingMaskIntoConstraints = false
-    signInButton.backgroundColor = .systemBlue
-    signInButton.layer.cornerRadius = 5
-    signInButton.titleLabel?.textColor = .systemBackground
-    signInButton.setTitle("Sign In", for: .normal)
+    signInButton.configuration = .filled()
+    signInButton.configuration?.imagePadding = 8 // for indicator spacing
+    signInButton.setTitle("Sign In", for: [])
     signInButton.addTarget(self, action: #selector(signIn), for: .primaryActionTriggered)
-
+    
     errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
     errorMessageLabel.textAlignment = .center
     errorMessageLabel.textColor = .systemRed
@@ -114,7 +113,13 @@ extension LoginViewController {
       configureView(withMessage: "Username / password cannot be blank!")
       return
     }
-
+    
+    if username == "Harun" && password == "gunes" {
+      signInButton.configuration?.showsActivityIndicator = true
+    } else {
+      configureView(withMessage: "Incorrect username / password")
+    }
+    
   }
   
   
@@ -122,5 +127,5 @@ extension LoginViewController {
     errorMessageLabel.isHidden = false
     errorMessageLabel.text = message
   }
-
+  
 }

@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
-//    window?.rootViewController = LoginViewController()
+    window?.rootViewController = LoginViewController()
 //    window?.rootViewController = OnboardingContainerVC()
-    window?.rootViewController = OnboardingContainerVC()
+//    window?.rootViewController = OnboardingContainerVC()
     
     return true
   }
