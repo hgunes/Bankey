@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let loginVC = LoginViewController()
   let onboardingContainerVC = OnboardingContainerVC()
   let dummyVC = DummyViewController()
+  let mainVC = MainViewController()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -27,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     onboardingContainerVC.delegate = self
     dummyVC.delegate = self
     
-    window?.rootViewController = loginVC
+//    window?.rootViewController = loginVC
+    window?.rootViewController = mainVC
 //    window?.rootViewController = OnboardingContainerVC()
 //    window?.rootViewController = dummyVC
     
