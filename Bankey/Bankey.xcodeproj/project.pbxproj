@@ -70,28 +70,20 @@
 				BE157E972827054200D5173B /* Log */,
 				BE157E962827050700D5173B /* Onboard */,
 				BE9334A92829D04C001B2BF5 /* Utils */,
-				BE0E430E282307C1000F0666 /* Files */,
+				BE0E430E282307C1000F0666 /* AppSupport */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
 		};
-		BE0E430E282307C1000F0666 /* Files */ = {
+		BE0E430E282307C1000F0666 /* AppSupport */ = {
 			isa = PBXGroup;
 			children = (
-				BE0E431928230B51000F0666 /* App Support */,
+				BE0E42F4282302F2000F0666 /* AppDelegate.swift */,
 				BE0E42FD282302F5000F0666 /* Assets.xcassets */,
 				BE0E42FF282302F5000F0666 /* LaunchScreen.storyboard */,
 				BE0E4302282302F5000F0666 /* Info.plist */,
 			);
-			name = Files;
-			sourceTree = "<group>";
-		};
-		BE0E431928230B51000F0666 /* App Support */ = {
-			isa = PBXGroup;
-			children = (
-				BE0E42F4282302F2000F0666 /* AppDelegate.swift */,
-			);
-			name = "App Support";
+			name = AppSupport;
 			sourceTree = "<group>";
 		};
 		BE157E962827050700D5173B /* Onboard */ = {
