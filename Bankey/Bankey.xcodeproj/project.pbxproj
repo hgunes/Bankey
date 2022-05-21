@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0229A02839AB5D006D8745 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02299F2839AB5D006D8745 /* AccountSummaryViewController.swift */; };
 		BE0E42F5282302F2000F0666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0E42F4282302F2000F0666 /* AppDelegate.swift */; };
 		BE0E42F9282302F2000F0666 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0E42F8282302F2000F0666 /* LoginViewController.swift */; };
 		BE0E42FE282302F5000F0666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0E42FD282302F5000F0666 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE02299F2839AB5D006D8745 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		BE0E42F1282302F2000F0666 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0E42F4282302F2000F0666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE0E42F8282302F2000F0666 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE02299E2839AB2E006D8745 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				BE02299F2839AB5D006D8745 /* AccountSummaryViewController.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		BE0E42E8282302F2000F0666 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 				BE1F63DA282DAEC500C0243D /* MainViewController.swift */,
 				BE157E972827054200D5173B /* Log */,
 				BE157E962827050700D5173B /* Onboard */,
+				BE02299E2839AB2E006D8745 /* AccountSummary */,
 				BE9334A92829D04C001B2BF5 /* Utils */,
 				BE0E430E282307C1000F0666 /* AppSupport */,
 			);
@@ -190,6 +201,7 @@
 				BE7519782826990900425A37 /* OnboardingContainerVC.swift in Sources */,
 				BE157E9928270AC800D5173B /* OnboardingVC.swift in Sources */,
 				BE1F63DB282DAEC500C0243D /* MainViewController.swift in Sources */,
+				BE0229A02839AB5D006D8745 /* AccountSummaryViewController.swift in Sources */,
 				BE0E42F9282302F2000F0666 /* LoginViewController.swift in Sources */,
 				BE0E42F5282302F2000F0666 /* AppDelegate.swift in Sources */,
 			);

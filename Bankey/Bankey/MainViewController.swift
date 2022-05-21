@@ -57,15 +57,6 @@ class MainViewController: UITabBarController {
 }
 // MARK: - ViewControllers
 
-class AccountSummaryViewController: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .systemBackground
-    title = "Account summary"
-  }
-}
-
 class TransfersViewController: UIViewController {
   
   override func viewDidLoad() {
