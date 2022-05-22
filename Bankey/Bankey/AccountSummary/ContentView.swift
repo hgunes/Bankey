@@ -7,6 +7,8 @@
 
 import UIKit
 
+let padding: CGFloat = 8
+
 class ContentView: UIView {
   
   let bankeyLabel = HeaderLabel(size: 32)
@@ -14,11 +16,14 @@ class ContentView: UIView {
   let greetingLabel = HeaderLabel(size: 24)
   let dateLabel = HeaderLabel(size: 24)
   
+  let imageView = UIImageView()
+  
   let stacView = UIStackView()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
     configure()
+    configureImageView()
   }
   
   
@@ -47,13 +52,28 @@ class ContentView: UIView {
     stacView.axis = .vertical
     stacView.distribution = .fillEqually
     
-    let padding: CGFloat = 8
+    
     
     NSLayoutConstraint.activate([
       stacView.topAnchor.constraint(equalTo: self.topAnchor, constant: padding),
       stacView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12),
       stacView.widthAnchor.constraint(equalTo: bankeyLabel.widthAnchor, constant: padding),
       stacView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -padding),
+    ])
+  }
+  
+  
+  func configureImageView() {
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+    addSubview(imageView)
+    
+    imageView.image = UIImage(systemName: "sun.max.fill")
+    
+    NSLayoutConstraint.activate([
+      imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+      imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:  -padding),
+      imageView.heightAnchor.constraint(equalToConstant: 100),
+      imageView.widthAnchor.constraint(equalToConstant: 100),
     ])
   }
 }
