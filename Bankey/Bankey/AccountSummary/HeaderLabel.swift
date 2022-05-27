@@ -23,6 +23,6 @@ class HeaderLabel: UILabel {
   convenience init(size: CGFloat) {
     self.init(frame: .zero)
     translatesAutoresizingMaskIntoConstraints = false
-    font = UIFont(name: "AppleSDGothicNeo-Bold", size: size)
+    font = UIFont(name: "AvenirNext-DemiBold", size: size)
   }
 }
