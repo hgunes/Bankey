@@ -40,12 +40,12 @@ class ContentView: UIView {
     addSubview(stacView)
     
     stacView.addArrangedSubview(bankeyLabel)
-    stacView.addArrangedSubview(nameLabel)
     stacView.addArrangedSubview(greetingLabel)
+    stacView.addArrangedSubview(nameLabel)
     stacView.addArrangedSubview(dateLabel)
     
     bankeyLabel.text = "Bankey"
-    nameLabel.text = "Harun,"
+    nameLabel.text = "Harun"
     greetingLabel.text = "Good morning,"
     dateLabel.text = "22.06.2022"
     
