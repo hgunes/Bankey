@@ -68,6 +68,7 @@ class ContentView: UIView {
     addSubview(imageView)
     
     imageView.image = UIImage(systemName: "sun.max.fill")
+    imageView.tintColor = .yellow
     
     NSLayoutConstraint.activate([
       imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
