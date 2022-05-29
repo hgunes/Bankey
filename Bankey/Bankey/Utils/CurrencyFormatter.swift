@@ -67,7 +67,7 @@ struct CurrencyFormatter {
     
     let rootString = NSMutableAttributedString(string: "$", attributes: dollarSignAttributes)
     let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)
-    let centString = NSAttributedString(string: cents, attributes: centAttributes)
+    let centString = NSAttributedString(string: ".\(cents)", attributes: centAttributes)
     
     rootString.append(dollarString)
     rootString.append(centString)
