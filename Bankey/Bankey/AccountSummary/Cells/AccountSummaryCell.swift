@@ -9,6 +9,19 @@ import UIKit
 
 class AccountSummaryCell: UITableViewCell {
   
+  enum AccountType: String {
+    case Banking
+    case CreditCard
+    case Investment
+  }
+  
+  struct ViewModel {
+    let accountType: AccountType
+    let accountName: String
+  }
+  
+  let viewModel: ViewModel? = nil
+  
   static let reuseID = "AccountSummaryCell"
   static let rowHeight: CGFloat = 112
   
@@ -38,14 +51,12 @@ extension AccountSummaryCell {
     typeLabel.translatesAutoresizingMaskIntoConstraints = false
     typeLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
     typeLabel.adjustsFontForContentSizeCategory = true
-    typeLabel.text = "Account type"
     
     underlineView.translatesAutoresizingMaskIntoConstraints = false
     underlineView.backgroundColor = appColor
     
     nameLabel.translatesAutoresizingMaskIntoConstraints = false
     nameLabel.font = UIFont.preferredFont(forTextStyle: .body)
-    nameLabel.text = "Harun Gunes"
     
     balanceStackView.translatesAutoresizingMaskIntoConstraints = false
     balanceStackView.axis = .vertical
@@ -113,5 +124,24 @@ extension AccountSummaryCell {
     rootString.append(centString)
     
     return rootString
+  }
+}
+
+extension AccountSummaryCell {
+  func configure(with vm: ViewModel) {
+    typeLabel.text = vm.accountType.rawValue
+    nameLabel.text = vm.accountName
+    
+    switch vm.accountType {
+    case .Banking:
+      underlineView.backgroundColor = appColor
+      balanceLabel.text = "Current balance"
+    case .CreditCard:
+      underlineView.backgroundColor = .systemTeal
+      balanceLabel.text = "Current balance"
+    case .Investment:
+      underlineView.backgroundColor = .systemCyan
+      balanceLabel.text = "Value"
+    }
   }
 }
