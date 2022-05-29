@@ -143,10 +143,10 @@ extension AccountSummaryCell {
       underlineView.backgroundColor = appColor
       balanceLabel.text = "Current balance"
     case .CreditCard:
-      underlineView.backgroundColor = .systemTeal
+      underlineView.backgroundColor = .systemCyan
       balanceLabel.text = "Current balance"
     case .Investment:
-      underlineView.backgroundColor = .systemCyan
+      underlineView.backgroundColor = .systemGreen
       balanceLabel.text = "Value"
     }
   }
