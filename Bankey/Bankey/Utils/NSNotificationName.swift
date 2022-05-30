@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+extension NSNotification.Name {
+  static let logout = Notification.Name("Logout")
+}

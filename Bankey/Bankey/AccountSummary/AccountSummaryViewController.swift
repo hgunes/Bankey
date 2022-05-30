@@ -13,6 +13,16 @@ class AccountSummaryViewController: UIViewController {
   
   var tableView = UITableView()
   
+  lazy var logoutButton: UIBarButtonItem = {
+    let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
+    barButtonItem.tintColor = .label
+    return barButtonItem
+  }()
+  
+  @objc func logoutTapped() {
+    NotificationCenter.default.post(name: .logout, object: nil)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
@@ -24,6 +34,8 @@ extension AccountSummaryViewController {
     setupTableView()
     setupTableHeaderView()
     fetchData()
+    
+    navigationItem.rightBarButtonItem = logoutButton
   }
   
   private func setupTableView() {
