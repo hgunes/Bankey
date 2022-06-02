@@ -77,6 +77,7 @@ extension LoginViewController {
     primaryTitleLabel.textAlignment = .center
     primaryTitleLabel.text = "Bankey"
     primaryTitleLabel.font = UIFont.boldSystemFont(ofSize: 32)
+    primaryTitleLabel.alpha = 0
     
     secondaryTitleLabel.translatesAutoresizingMaskIntoConstraints = false
     secondaryTitleLabel.textAlignment = .center
@@ -162,10 +163,17 @@ extension LoginViewController {
 
 extension LoginViewController {
   private func animate() {
-    let animator1 = UIViewPropertyAnimator(duration: 0.25, curve: .easeInOut) {
+    let animator1 = UIViewPropertyAnimator(duration: 0.36, curve: .easeInOut) {
       self.stackViewLeadingAnchor?.constant = self.leadingEdgeOnScreen
+      
       self.view.layoutIfNeeded()
     }
     animator1.startAnimation()
+    
+    let animator2 = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+      self.primaryTitleLabel.alpha = 1
+    }
+    animator2.startAnimation()
   }
+  
 }
