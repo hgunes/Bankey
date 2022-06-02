@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
   let errorMessageLabel = UILabel()
   let primaryTitleLabel = UILabel()
   let secondaryTitleLabel = UILabel()
+  let stackView = UIStackView()
   
   weak var delegate: LoginViewControllerDelegate?
   
@@ -40,6 +41,7 @@ class LoginViewController: UIViewController {
     
     style()
     layout()
+    configureStackView()
   }
   
   override func viewDidDisappear(_ animated: Bool) {
@@ -84,17 +86,30 @@ extension LoginViewController {
   }
   
   
+  private func configureStackView() {
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.axis = .vertical
+    stackView.spacing = 20
+    stackView.distribution = .equalSpacing
+    stackView.addArrangedSubview(primaryTitleLabel)
+    stackView.addArrangedSubview(secondaryTitleLabel)
+  }
+  
+  
   private func layout() {
     view.addSubview(loginView)
     view.addSubview(signInButton)
     view.addSubview(errorMessageLabel)
-    view.addSubview(secondaryTitleLabel)
-    view.addSubview(primaryTitleLabel)
+    view.addSubview(stackView)
     
     NSLayoutConstraint.activate([
+      stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      
+      loginView.topAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 3),
       loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
       loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
       view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
+      
       
       signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
       signInButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
@@ -103,17 +118,9 @@ extension LoginViewController {
       errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
       errorMessageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
       errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor),
-      
-      loginView.topAnchor.constraint(equalToSystemSpacingBelow: secondaryTitleLabel.bottomAnchor, multiplier: 3),
-      secondaryTitleLabel.leadingAnchor.constraint(equalTo: errorMessageLabel.leadingAnchor),
-      secondaryTitleLabel.trailingAnchor.constraint(equalTo: errorMessageLabel.trailingAnchor),
-      
-      secondaryTitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: primaryTitleLabel.bottomAnchor, multiplier: 3),
-      primaryTitleLabel.leadingAnchor.constraint(equalTo: secondaryTitleLabel.leadingAnchor),
-      primaryTitleLabel.trailingAnchor.constraint(equalTo: secondaryTitleLabel.trailingAnchor),
     ])
     
-    titleLeadingAnchor = primaryTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+    titleLeadingAnchor = stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
     titleLeadingAnchor!.isActive = true
   }
 }
