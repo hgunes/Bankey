@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
   var leadingEdgeOnScreen: CGFloat = 16
   var leadingEdgeOffScreen: CGFloat = -1000
   
-  var titleLeadingAnchor: NSLayoutConstraint?
+  var stackViewLeadingAnchor: NSLayoutConstraint?
   
   
   override func viewDidLoad() {
@@ -120,8 +120,8 @@ extension LoginViewController {
       errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor),
     ])
     
-    titleLeadingAnchor = stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
-    titleLeadingAnchor!.isActive = true
+    stackViewLeadingAnchor = stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+    stackViewLeadingAnchor!.isActive = true
   }
 }
 
@@ -163,7 +163,7 @@ extension LoginViewController {
 extension LoginViewController {
   private func animate() {
     let animator1 = UIViewPropertyAnimator(duration: 0.25, curve: .easeInOut) {
-      self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+      self.stackViewLeadingAnchor?.constant = self.leadingEdgeOnScreen
       self.view.layoutIfNeeded()
     }
     animator1.startAnimation()
