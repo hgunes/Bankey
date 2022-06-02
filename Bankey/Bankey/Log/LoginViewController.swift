@@ -29,6 +29,11 @@ class LoginViewController: UIViewController {
     return loginView.passwordTextField.text
   }
   
+  var leadingEdgeOnScreen: CGFloat = 16
+  var leadingEdgeOffScreen: CGFloat = -1000
+  
+  var titleLeadingAnchor: NSLayoutConstraint?
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,6 +48,10 @@ class LoginViewController: UIViewController {
   }
   
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    animate()
+  }
 }
 
 extension LoginViewController {
@@ -103,6 +112,9 @@ extension LoginViewController {
       primaryTitleLabel.leadingAnchor.constraint(equalTo: secondaryTitleLabel.leadingAnchor),
       primaryTitleLabel.trailingAnchor.constraint(equalTo: secondaryTitleLabel.trailingAnchor),
     ])
+    
+    titleLeadingAnchor = primaryTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+    titleLeadingAnchor!.isActive = true
   }
 }
 
@@ -139,4 +151,14 @@ extension LoginViewController {
     errorMessageLabel.text = message
   }
   
+}
+
+extension LoginViewController {
+  private func animate() {
+    let animator1 = UIViewPropertyAnimator(duration: 0.25, curve: .easeInOut) {
+      self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+      self.view.layoutIfNeeded()
+    }
+    animator1.startAnimation()
+  }
 }
