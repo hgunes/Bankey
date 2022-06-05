@@ -10,6 +10,9 @@ import UIKit
 class ShakeyBellView: UIView {
   
   let imageView = UIImageView()
+  let buttonView = UIButton()
+
+  let buttonRadius: CGFloat = 16
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -44,17 +47,32 @@ extension ShakeyBellView {
     imageView.translatesAutoresizingMaskIntoConstraints = false
     let image = UIImage(systemName: "bell.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
     imageView.image = image
+    
+    buttonView.translatesAutoresizingMaskIntoConstraints = false
+    buttonView.layer.cornerRadius = buttonRadius / 2
+    buttonView.backgroundColor = .systemRed
+    buttonView.titleLabel?.font = .systemFont(ofSize: 13)
+    buttonView.setTitle("9", for: .normal)
+    buttonView.setTitleColor(.white, for: .normal)
   }
   
   
   private func layout() {
     addSubview(imageView)
+    addSubview(buttonView)
     
     NSLayoutConstraint.activate([
       imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
       imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
       imageView.heightAnchor.constraint(equalToConstant: 24),
       imageView.widthAnchor.constraint(equalToConstant: 24)
+    ])
+    
+    NSLayoutConstraint.activate([
+      buttonView.topAnchor.constraint(equalTo: imageView.topAnchor),
+      buttonView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -9),
+      buttonView.widthAnchor.constraint(equalToConstant: buttonRadius),
+      buttonView.heightAnchor.constraint(equalToConstant: buttonRadius),
     ])
   }
 }
