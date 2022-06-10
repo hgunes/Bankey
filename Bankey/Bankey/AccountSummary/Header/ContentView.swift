@@ -39,6 +39,8 @@ class ContentView: UIView {
     stacView.translatesAutoresizingMaskIntoConstraints = false
     addSubview(stacView)
     
+    bankeyLabel.text = "Bankey"
+    
     stacView.addArrangedSubview(bankeyLabel)
     stacView.addArrangedSubview(greetingLabel)
     stacView.addArrangedSubview(nameLabel)
@@ -52,7 +54,7 @@ class ContentView: UIView {
     NSLayoutConstraint.activate([
       stacView.topAnchor.constraint(equalTo: self.topAnchor, constant: padding),
       stacView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12),
-      stacView.widthAnchor.constraint(equalTo: bankeyLabel.widthAnchor, constant: padding),
+//      stacView.widthAnchor.constraint(equalTo: bankeyLabel.widthAnchor, constant: padding),
       stacView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -padding),
     ])
   }

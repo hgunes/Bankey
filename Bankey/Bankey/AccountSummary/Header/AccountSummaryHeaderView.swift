@@ -8,7 +8,7 @@
 import UIKit
 
 class AccountSummaryHeaderView: UIView {
-
+  
   let contentView = ContentView()
   let shakeyBell = ShakeyBellView()
   
@@ -58,9 +58,13 @@ class AccountSummaryHeaderView: UIView {
     ])
   }
   
-  private func configureViewModel(viewModel: ViewModel) {
-    contentView.nameLabel.text = viewModel.name
-    contentView.greetingLabel.text = viewModel.greeting
-    contentView.nameLabel.text = viewModel.dateFormatted
+  
+  func configureViewModel(viewModel: ViewModel) {
+    DispatchQueue.main.async {
+      self.contentView.nameLabel.text = viewModel.name
+      self.contentView.greetingLabel.text = viewModel.greeting
+      self.contentView.nameLabel.text = viewModel.dateFormatted
+    }
+    
   }
 }
