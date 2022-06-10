@@ -44,11 +44,6 @@ class ContentView: UIView {
     stacView.addArrangedSubview(nameLabel)
     stacView.addArrangedSubview(dateLabel)
     
-    bankeyLabel.text = "Bankey"
-    nameLabel.text = "Harun"
-    greetingLabel.text = "Good morning,"
-    dateLabel.text = "22.06.2022"
-    
     stacView.axis = .vertical
     stacView.distribution = .fillEqually
     

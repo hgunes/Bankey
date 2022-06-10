@@ -29,6 +29,7 @@
 		BE7519782826990900425A37 /* OnboardingContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7519772826990900425A37 /* OnboardingContainerVC.swift */; };
 		BE9334A82829C0A6001B2BF5 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9334A72829C0A6001B2BF5 /* DummyViewController.swift */; };
 		BE9334AB2829D07E001B2BF5 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9334AA2829D07E001B2BF5 /* LocalState.swift */; };
+		BEBEE6C02853C32400BF9980 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		BE7519772826990900425A37 /* OnboardingContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerVC.swift; sourceTree = "<group>"; };
 		BE9334A72829C0A6001B2BF5 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		BE9334AA2829D07E001B2BF5 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
+		BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				BE34744628437AD600A4A4C2 /* CurrencyFormatter.swift */,
 				BE010D9328454F5F006EC01F /* NSNotificationName.swift */,
 				BE010D9528455343006EC01F /* UITextField+SecureToggle.swift */,
+				BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				BE34744728437AD600A4A4C2 /* CurrencyFormatter.swift in Sources */,
 				BE3474432842BB1700A4A4C2 /* AccountSummaryCell.swift in Sources */,
 				BE3AC223284B754200C958DE /* ShakeyBellView.swift in Sources */,
+				BEBEE6C02853C32400BF9980 /* Date+Extension.swift in Sources */,
 				BE1F63D9282DA7D400C0243D /* UIViewController+Extension.swift in Sources */,
 				BE34743F283ABFC800A4A4C2 /* HeaderLabel.swift in Sources */,
 				BE0E431D28230BC3000F0666 /* LoginView.swift in Sources */,
