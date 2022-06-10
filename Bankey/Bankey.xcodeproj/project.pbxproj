@@ -30,6 +30,7 @@
 		BE9334A82829C0A6001B2BF5 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9334A72829C0A6001B2BF5 /* DummyViewController.swift */; };
 		BE9334AB2829D07E001B2BF5 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9334AA2829D07E001B2BF5 /* LocalState.swift */; };
 		BEBEE6C02853C32400BF9980 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */; };
+		BEBEE6C22853C7C200BF9980 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BE9334A72829C0A6001B2BF5 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		BE9334AA2829D07E001B2BF5 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				BE02299F2839AB5D006D8745 /* AccountSummaryViewController.swift */,
 				BE3474402842BA9E00A4A4C2 /* Header */,
 				BE3474412842BADD00A4A4C2 /* Cells */,
+				BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				BE010D9428454F5F006EC01F /* NSNotificationName.swift in Sources */,
 				BE34744728437AD600A4A4C2 /* CurrencyFormatter.swift in Sources */,
 				BE3474432842BB1700A4A4C2 /* AccountSummaryCell.swift in Sources */,
+				BEBEE6C22853C7C200BF9980 /* AccountSummaryViewController+Networking.swift in Sources */,
 				BE3AC223284B754200C958DE /* ShakeyBellView.swift in Sources */,
 				BEBEE6C02853C32400BF9980 /* Date+Extension.swift in Sources */,
 				BE1F63D9282DA7D400C0243D /* UIViewController+Extension.swift in Sources */,
