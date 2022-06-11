@@ -31,6 +31,7 @@
 		BE9334AB2829D07E001B2BF5 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9334AA2829D07E001B2BF5 /* LocalState.swift */; };
 		BEBEE6C02853C32400BF9980 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */; };
 		BEBEE6C22853C7C200BF9980 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */; };
+		BEBEE6C62854C4D800BF9980 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		BE9334AA2829D07E001B2BF5 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
+		BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +187,8 @@
 		BE34744D28438C9000A4A4C2 /* BankeyUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE34745528438DA500A4A4C2 /* CurrencyFormatterTests.swift */,
+				BEBEE6C42854C40600BF9980 /* AccountSummaryTests */,
+				BEBEE6C32854C3F600BF9980 /* UtilsTests */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -210,6 +213,22 @@
 				BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BEBEE6C32854C3F600BF9980 /* UtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE34745528438DA500A4A4C2 /* CurrencyFormatterTests.swift */,
+			);
+			path = UtilsTests;
+			sourceTree = "<group>";
+		};
+		BEBEE6C42854C40600BF9980 /* AccountSummaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */,
+			);
+			path = AccountSummaryTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE34745628438DA500A4A4C2 /* CurrencyFormatterTests.swift in Sources */,
+				BEBEE6C62854C4D800BF9980 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
