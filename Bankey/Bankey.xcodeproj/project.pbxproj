@@ -32,6 +32,7 @@
 		BEBEE6C02853C32400BF9980 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */; };
 		BEBEE6C22853C7C200BF9980 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */; };
 		BEBEE6C62854C4D800BF9980 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */; };
+		BEBEE6C82854DE6400BF9980 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C72854DE6400BF9980 /* AccountTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		BEBEE6BF2853C32400BF9980 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		BEBEE6C72854DE6400BF9980 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */,
+				BEBEE6C72854DE6400BF9980 /* AccountTests.swift */,
 			);
 			path = AccountSummaryTests;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE34745628438DA500A4A4C2 /* CurrencyFormatterTests.swift in Sources */,
+				BEBEE6C82854DE6400BF9980 /* AccountTests.swift in Sources */,
 				BEBEE6C62854C4D800BF9980 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
