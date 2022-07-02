@@ -16,6 +16,8 @@ class AccountSummaryViewController: UIViewController {
   
   var tableView = UITableView()
   
+  let refreshControl = UIRefreshControl()
+  
   lazy var logoutButton: UIBarButtonItem = {
     let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
     barButtonItem.tintColor = .label
@@ -36,6 +38,7 @@ extension AccountSummaryViewController {
   private func setup() {
     setupTableView()
     setupTableHeaderView()
+    setupRefreshControl()
     fetchData()
     
     navigationItem.rightBarButtonItem = logoutButton
@@ -69,6 +72,17 @@ extension AccountSummaryViewController {
     
     tableView.tableHeaderView = header
   }
+  
+  
+  private func setupRefreshControl() {
+    refreshControl.tintColor = appColor
+    refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+    tableView.refreshControl = refreshControl
+  }
+  
+  @objc func pullToRefresh() {
+     fetchData()
+  }
 }
 
 extension AccountSummaryViewController: UITableViewDataSource {
@@ -98,9 +112,10 @@ extension AccountSummaryViewController {
   private func fetchData() {
     
     let group = DispatchGroup()
+    let userID = String(Int.random(in: 1..<4))
     
     group.enter()
-    fetchProfile(forUserId: "2") { result in
+    fetchProfile(forUserId: userID) { result in
       switch result {
       case .success(let profile):
         self.profile = profile
@@ -113,7 +128,7 @@ extension AccountSummaryViewController {
     }
     
     group.enter()
-    fetchAccounts(forUserId: "2") { result in
+    fetchAccounts(forUserId: userID) { result in
       switch result {
       case .success(let accounts):
         self.accounts = accounts
@@ -126,6 +141,7 @@ extension AccountSummaryViewController {
     
     group.notify(queue: .main) {
       self.tableView.reloadData()
+      self.tableView.refreshControl?.endRefreshing()
     }
   }
   
