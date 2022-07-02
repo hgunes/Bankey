@@ -12,7 +12,7 @@ class AccountSummaryHeaderView: UIView {
   let contentView = ContentView()
   let shakeyBell = ShakeyBellView()
   
-  struct ViewModel {
+  struct HeaderViewModel {
     let name: String
     let greeting: String
     let date: Date
@@ -39,7 +39,6 @@ class AccountSummaryHeaderView: UIView {
   private func commonInit() {
     addSubview(contentView)
     
-    contentView.translatesAutoresizingMaskIntoConstraints = false
     contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
     contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
     contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
@@ -59,7 +58,7 @@ class AccountSummaryHeaderView: UIView {
   }
   
   
-  func configureViewModel(viewModel: ViewModel) {
+  func configureViewModel(viewModel: HeaderViewModel) {
     DispatchQueue.main.async {
       self.contentView.nameLabel.text = viewModel.name
       self.contentView.greetingLabel.text = viewModel.greeting

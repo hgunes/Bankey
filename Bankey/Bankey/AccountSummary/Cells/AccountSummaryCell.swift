@@ -15,7 +15,7 @@ enum AccountType: String, Codable {
 
 class AccountSummaryCell: UITableViewCell {
   
-  struct ViewModel {
+  struct AccountCellViewModel {
     let accountType: AccountType
     let accountName: String
     let balance: Decimal
@@ -25,7 +25,7 @@ class AccountSummaryCell: UITableViewCell {
     }
   }
   
-  let viewModel: ViewModel? = nil
+  let viewModel: AccountCellViewModel? = nil
   
   static let reuseID = "AccountSummaryCell"
   static let rowHeight: CGFloat = 112
@@ -135,7 +135,7 @@ extension AccountSummaryCell {
 }
 
 extension AccountSummaryCell {
-  func configure(with vm: ViewModel) {
+  func configure(with vm: AccountCellViewModel) {
     typeLabel.text = vm.accountType.rawValue
     nameLabel.text = vm.accountName
     balanceAmountLabel.attributedText = vm.balanceAsAttributedString

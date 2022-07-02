@@ -11,10 +11,10 @@ let padding: CGFloat = 8
 
 class ContentView: UIView {
   
-  let bankeyLabel = HeaderLabel(size: 32)
-  let nameLabel = HeaderLabel(size: 24)
-  let greetingLabel = HeaderLabel(size: 24)
-  let dateLabel = HeaderLabel(size: 24)
+  let bankeyLabel = HeaderLabel(size: 28)
+  let nameLabel = HeaderLabel(size: 20)
+  let greetingLabel = HeaderLabel(size: 20)
+  let dateLabel = HeaderLabel(size: 20)
   
   let imageView = UIImageView()
   
@@ -40,6 +40,7 @@ class ContentView: UIView {
     addSubview(stacView)
     
     bankeyLabel.text = "Bankey"
+    nameLabel.text = "Harun"
     
     stacView.addArrangedSubview(bankeyLabel)
     stacView.addArrangedSubview(greetingLabel)
@@ -47,7 +48,7 @@ class ContentView: UIView {
     stacView.addArrangedSubview(dateLabel)
     
     stacView.axis = .vertical
-    stacView.distribution = .fillEqually
+    stacView.distribution = .fillProportionally
     
     
     

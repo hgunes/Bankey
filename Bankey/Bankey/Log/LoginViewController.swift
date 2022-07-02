@@ -135,30 +135,33 @@ extension LoginViewController {
 extension LoginViewController {
   @objc func signIn() {
     errorMessageLabel.isHidden = true
+    signInButton.configuration?.showsActivityIndicator = true
+    delegate?.didLogin()
     
-    login()
+    
+//    login()
     
   }
   
-  private func login() {
-    guard let username = username, let password = password else {
-      assertionFailure("🔴 Username / password should never be nil!")
-      return
-    }
-    
-    if username.isEmpty || password.isEmpty {
-      configureView(withMessage: "Username / password cannot be blank!")
-    }
-    
-    if username == "Harun" && password == "gunes" {
-      signInButton.configuration?.showsActivityIndicator = true
-      delegate?.didLogin()
-    } else {
-      configureView(withMessage: "Incorrect username / password")
-      shakeButton()
-    }
-    
-  }
+//  private func login() {
+//    guard let username = username, let password = password else {
+//      assertionFailure("🔴 Username / password should never be nil!")
+//      return
+//    }
+//
+//    if username.isEmpty || password.isEmpty {
+//      configureView(withMessage: "Username / password cannot be blank!")
+//    }
+//
+//    if username == "Harun" && password == "gunes" {
+//      signInButton.configuration?.showsActivityIndicator = true
+//      delegate?.didLogin()
+//    } else {
+//      configureView(withMessage: "Incorrect username / password")
+//      shakeButton()
+//    }
+//
+//  }
   
   
   func configureView(withMessage message: String) {

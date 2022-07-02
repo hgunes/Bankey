@@ -14,7 +14,7 @@ enum NetworkError: Error {
 
 struct Profile: Codable {
   let id: String
-  let firstName: String
+  var firstName: String
   let lastName: String
   
 //  enum CodingKeys: String, CodingKey {
@@ -33,10 +33,26 @@ extension AccountSummaryViewController {
         completion(.failure(.serverError))
         return
       }
+       
+      /// The JSON file from the link has typo.
+      /// To proceed with URLSession, below handwritten data was created.
+      
+//      let json = """
+//      {
+//      "id": "1",
+//      "first_name": "Harun",
+//      "last_name": "Gunes"
+//      }
+//      """
+//      let temporaryData = json.data(using: .utf8)!
+      
+      let decoder = JSONDecoder()
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
+      decoder.dateDecodingStrategy = .iso8601
       
       do {
-        let profile = try JSONDecoder().decode(Profile.self, from: data)
-        completion(.success(profile))
+        let result = try decoder.decode(Profile.self, from: data)
+        completion(.success(result))
       } catch {
         completion(.failure(.decodingError))
       }
