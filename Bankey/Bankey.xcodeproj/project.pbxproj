@@ -34,6 +34,7 @@
 		BEBEE6C22853C7C200BF9980 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */; };
 		BEBEE6C62854C4D800BF9980 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */; };
 		BEBEE6C82854DE6400BF9980 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C72854DE6400BF9980 /* AccountTests.swift */; };
+		BEE9976B287211660070EFE3 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE9976A287211660070EFE3 /* SkeletonLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		BEBEE6C12853C7C200BF9980 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		BEBEE6C72854DE6400BF9980 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		BEE9976A287211660070EFE3 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				BE3474422842BB1700A4A4C2 /* AccountSummaryCell.swift */,
+				BEE9976A287211660070EFE3 /* SkeletonLoadable.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				BE1F63D9282DA7D400C0243D /* UIViewController+Extension.swift in Sources */,
 				BE34743F283ABFC800A4A4C2 /* HeaderLabel.swift in Sources */,
 				BE0E431D28230BC3000F0666 /* LoginView.swift in Sources */,
+				BEE9976B287211660070EFE3 /* SkeletonLoadable.swift in Sources */,
 				BE34743D283ABCBD00A4A4C2 /* ContentView.swift in Sources */,
 				BE9334AB2829D07E001B2BF5 /* LocalState.swift in Sources */,
 				BE0229A2283A7A36006D8745 /* AccountSummaryHeaderView.swift in Sources */,
