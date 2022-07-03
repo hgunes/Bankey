@@ -35,6 +35,7 @@
 		BEBEE6C62854C4D800BF9980 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */; };
 		BEBEE6C82854DE6400BF9980 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEE6C72854DE6400BF9980 /* AccountTests.swift */; };
 		BEE9976B287211660070EFE3 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE9976A287211660070EFE3 /* SkeletonLoadable.swift */; };
+		BEE9976D2872136E0070EFE3 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE9976C2872136E0070EFE3 /* SkeletonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		BEBEE6C52854C4D800BF9980 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		BEBEE6C72854DE6400BF9980 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		BEE9976A287211660070EFE3 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		BEE9976C2872136E0070EFE3 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			children = (
 				BE3474422842BB1700A4A4C2 /* AccountSummaryCell.swift */,
 				BEE9976A287211660070EFE3 /* SkeletonLoadable.swift */,
+				BEE9976C2872136E0070EFE3 /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				BE347445284379A300A4A4C2 /* Decimal+Extension.swift in Sources */,
 				BE010D9428454F5F006EC01F /* NSNotificationName.swift in Sources */,
+				BEE9976D2872136E0070EFE3 /* SkeletonCell.swift in Sources */,
 				BE34744728437AD600A4A4C2 /* CurrencyFormatter.swift in Sources */,
 				BE3474432842BB1700A4A4C2 /* AccountSummaryCell.swift in Sources */,
 				BEBEE6C22853C7C200BF9980 /* AccountSummaryViewController+Networking.swift in Sources */,
